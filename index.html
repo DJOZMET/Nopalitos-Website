@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FX | Productos Frescos</title>
+
+    <meta
+        name="description"
+        content="Productos frescos, negocios y publicidad local."
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- MENU PRINCIPAL -->
+    <header class="header">
+
+        <div class="nav">
+
+            <a href="#inicio" class="logo">
+                <img src="images/logo-nopalitos.png" alt="Nopalitos de Mexico">
+            </a>
+
+
+            <button class="mobile-menu-button" id="mobileMenuButton">
+                ☰
+            </button>     
+
+            
+<nav class="nav-links">
+    <a href="#inicio" id="navHome">Inicio</a>
+    <a href="#productos" id="navProducts">Productos</a>
+    <a href="#publicidad" id="navAdvertising">Publicidad</a>
+    <a href="#menus-tv" id="navMenus">Menús TV</a>
+    <a href="#nosotros" id="navAbout">Nosotros</a>
+    <a href="#contacto" id="navContact">Contacto</a>
+
+    <button class="language-button" id="languageButton">
+        English
+    </button>
+</nav>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- PORTADA -->
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <p class="hero-small" id="heroSmall">
+                    PRODUCTOS FRESCOS • CALIDAD • SERVICIO
+                </p>
+
+                <h1 id="heroTitle">
+                    Frescura que
+                    <span>se siente.</span>
+                </h1>
+
+                <p class="hero-description" id="heroDescription">
+                    Productos frescos seleccionados para hogares,
+                    tiendas, restaurantes y supermercados.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#productos" class="button primary" id="heroProductsButton">
+                        Ver productos →
+                    </a>
+
+                    <a href="#publicidad" class="button secondary" id="heroAdvertisingButton">
+                        Anúnciate aquí
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+<!-- PRODUCTOS -->
+<section class="products" id="productos">
+
+    <div class="products-header">
+
+        <p class="products-small" id="productsSmall">
+            PRODUCTOS FRESCOS
+        </p>
+
+        <h2 id="productsTitle">
+            Calidad que puedes
+            <span>ver.</span>
+        </h2>
+
+        <p class="products-description" id="productsDescription">
+            Explora algunos de nuestros productos frescos.
+            Consulta disponibilidad y presentaciones.
+        </p>
+
+    </div>
+
+<p class="products-order-note" id="productsOrderNote">✓ Ordena solo la cantidad que necesites.</p>
+    
+    <div class="products-carousel">
+
+    <!-- Flecha izquierda -->
+    <button class="products-arrow products-arrow-prev"
+            id="productsPrev"
+            aria-label="Ver productos anteriores">
+        ‹
+    </button>
+
+    <!-- Tarjetas de productos -->
+    <div class="product-grid" id="productGrid">
+
+    </div>
+
+    <!-- Flecha derecha -->
+    <button class="products-arrow products-arrow-next"
+            id="productsNext"
+            aria-label="Ver más productos">
+        ›
+    </button>
+
+</div>
+
+    <p class="products-full-list">
+    <a href="#contacto" id="productsFullList">
+        ¿Buscas más opciones? Solicita nuestra lista completa de productos y presentaciones por correo electrónico.
+    </a>
+</p>
+
+        </div>
+
+</div>
+    
+    </div>
+
+</section>
+
+<!-- PUBLICIDAD -->
+
+<section class="advertising" id="publicidad">
+
+    <div class="advertising-header">
+
+        <p class="advertising-small" id="advertisingSmall">
+            PUBLICIDAD LOCAL
+        </p>
+
+        <h2 id="advertisingTitle">
+            Tu negocio también puede
+            <span>estar aquí.</span>
+        </h2>
+
+        <p class="advertising-description" id="advertisingDescription">
+            Promociona tu negocio, productos y ofertas
+            directamente con nuestros clientes.
+        </p>
+
+    </div>
+
+    <div class="ad-showcase">
+
+        <div class="ad-video">
+
+            <button class="ad-arrow ad-arrow-prev" id="adPrev" aria-label="Anuncio anterior">‹</button>
+
+            <button class="ad-arrow ad-arrow-next" id="adNext" aria-label="Siguiente anuncio">›</button>
+    
+            <video id="adVideo" controls muted playsinline>
+                <source src="videos/anuncio-supermercado.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+            </video>
+    
+        </div>
+
+        <div class="ad-info">
+
+            <div>
+                <p class="ad-label" id="adLabel">NEGOCIO DESTACADO</p>
+                <h3 id="adBusinessName">Anuncio destacado</h3>
+            </div>
+        
+            <a href="#contacto" class="ad-contact" id="adContactButton">
+                Anúnciate aquí &rarr;
+            </a>
+        
+        </div>
+    
+    </div>
+
+</section>
+
+
+        <!-- MENUS DIGITALES PARA TV -->
+<section class="tv-menus" id="menus-tv">
+
+    <div class="tv-content">
+
+        <p class="tv-small" id="tvSmall">
+            MENÚS DIGITALES PARA NEGOCIOS
+        </p>
+
+        <h2 id="tvTitle">
+            Tu menú merece
+            <span>verse increíble.</span>
+        </h2>
+
+        <p class="tv-description" id="tvDescription">
+            Diseñamos menús digitales para TVs ideales para
+            restaurantes, taquerías, supermercados, carnicerías
+            y otros negocios.
+        </p>
+
+        <div class="tv-services">
+
+            <div class="tv-service">
+                <span>01</span>
+                <p id="tvService1">Menús digitales</p>
+            </div>
+
+            <div class="tv-service">
+                <span>02</span>
+                <p id="tvService2">Promociones y ofertas</p>
+            </div>
+
+            <div class="tv-service">
+                <span>03</span>
+                <p id="tvService3">Combos y precios</p>
+            </div>
+
+        </div>
+
+        <a href="#contacto" class="button tv-button" id="tvButton">
+            Quiero un menú para mi negocio →
+        </a>
+
+    </div>
+
+    <div class="tv-preview">
+
+        <div class="tv-screen">
+
+            <div class="tv-screen-top">
+                <span>FX DIGITAL MENU</span>
+                <span>● LIVE</span>
+            </div>
+
+            <div class="tv-screen-content">
+
+<video class="tv-demo-video" muted loop autoplay playsinline>
+    <source src="videos/familypack.mp4" type="video/mp4">
+</video>
+                
+
+            </div>
+
+        </div>
+
+        <div class="tv-stand"></div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     DÓNDE COMPRAR
+========================= -->
+
+<section class="locations" id="donde-comprar">
+
+    <div class="locations-content">
+
+        <!-- Encabezado de la sección -->
+        <p class="locations-small" id="locationsSmall">
+            DÓNDE COMPRAR
+        </p>
+
+        <h2 id="locationsTitle">
+            Encuentra nuestros productos cerca de ti
+        </h2>
+
+        <p class="locations-description" id="locationsDescription">
+            Visita alguno de estos comercios para encontrar productos de Nopalitos de México.
+        </p>
+
+        <!--
+            Las tiendas se agregarán aquí automáticamente.
+            Cada tienda tendrá:
+            - Logo
+            - Nombre
+            - Dirección
+        -->
+        <div class="locations-carousel">
+
+    <!-- Flecha izquierda -->
+    <button class="locations-arrow locations-arrow-prev"
+            id="locationsPrev"
+            aria-label="Ver lugares anteriores">
+        ‹
+    </button>
+
+    <!-- Tarjetas de lugares -->
+    <div class="locations-grid" id="locationsGrid">
+
+    </div>
+
+    <!-- Flecha derecha -->
+    <button class="locations-arrow locations-arrow-next"
+            id="locationsNext"
+            aria-label="Ver más lugares">
+        ›
+    </button>
+
+</div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FIN DÓNDE COMPRAR
+========================= -->
+
+
+<!-- NOSOTROS -->
+
+<section class="about" id="nosotros">
+
+    <div class="about-content">
+
+        <p class="about-small" id="aboutSmall">
+            SOBRE NOSOTROS
+        </p>
+
+        <h2 id="aboutTitle">
+            Frescura, calidad
+            <span>y confianza.</span>
+        </h2>
+
+        <p class="about-description" id="aboutDescription">
+            Nos especializamos en productos frescos preparados
+            para tiendas, restaurantes y supermercados. Nuestro compromiso es ofrecer frescura, calidad y presentaciones prácticas que faciliten el trabajo de nuestros clientes.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+
+    <div class="contact-content">
+
+        <p class="contact-small" id="contactSmall">
+            HABLEMOS
+        </p>
+
+        <h2 id="contactTitle">
+            ¿Listo para
+            <span>trabajar juntos?</span>
+        </h2>
+
+        <p class="contact-description" id="contactDescription">
+            Contáctanos para productos frescos, publicidad para tu negocio
+            o diseño de menús digitales para TV.
+        </p>
+        <div class="contact-buttons">
+
+            <a href="mailto:sales@nopalitosmx.com" class="contact-button email-button">
+                sales@nopalitosmx.com
+
+            
+            </a>
+
+            <a href="tel:+17078354929" class="contact-button phone-button">
+                707-835-4929
+            </a>
+            <a href="tel:+17075489585" class="contact-button phone-button">
+    707-548-9585
+</a>
+
+        </div>
+
+        <!-- REDES SOCIALES Y MENSAJES -->
+<div class="social-links">
+    <a href="#" class="social-link facebook-link" aria-label="Facebook">
+    <span>f</span>
+</a>
+
+<a href="#" class="social-link instagram-link" aria-label="Instagram">
+    <span>◎</span>
+</a>
+
+</div>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+<footer class="footer">
+    <p id="footerCopyright">
+        © 2026 Nopalitos de México. Todos los derechos reservados.
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>
