@@ -386,6 +386,20 @@ renderProducts();
 languageButton.addEventListener("click", function () {
 
     if (currentLanguage === "es") {
+        document.documentElement.lang = "en";
+
+        /* =========================================
+   ACCESIBILIDAD — CONTROL DE VIDEO EN INGLÉS
+   Actualiza el botón según el estado del video
+   ========================================= */
+
+if (tvDemoVideoControl.paused) {
+    tvVideoControl.textContent = "▶ Play";
+    tvVideoControl.setAttribute("aria-label", "Play video");
+} else {
+    tvVideoControl.textContent = "⏸ Pause";
+    tvVideoControl.setAttribute("aria-label", "Pause video");
+}
 
         // ==================== TEXTOS EN INGLÉS ====================
 
@@ -428,6 +442,20 @@ locationsDescription.textContent = "Visit one of these local retailers to find N
         updateMenuLanguage("en");
 
     } else {
+        document.documentElement.lang = "es";
+
+        /* =========================================
+   ACCESIBILIDAD — CONTROL DE VIDEO EN ESPAÑOL
+   Actualiza el botón según el estado del video
+   ========================================= */
+
+if (tvDemoVideoControl.paused) {
+    tvVideoControl.textContent = "▶ Reproducir";
+    tvVideoControl.setAttribute("aria-label", "Reproducir video");
+} else {
+    tvVideoControl.textContent = "⏸ Pausar";
+    tvVideoControl.setAttribute("aria-label", "Pausar video");
+}
 
         // ==================== TEXTOS EN ESPAÑOL ====================
 
@@ -505,10 +533,26 @@ renderProducts();
     
         if (navLinks.classList.contains("active")) {
             mobileMenuButton.textContent = "✕";
+            mobileMenuButton.setAttribute("aria-expanded", "true");
         } else {
             mobileMenuButton.textContent = "☰";
+            mobileMenuButton.setAttribute("aria-expanded", "false");
         }
          
+});
+
+/* =========================================
+   ACCESIBILIDAD — CERRAR MENÚ CON ESCAPE
+   Permite cerrar el menú móvil con la tecla Esc
+   ========================================= */
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+        mobileMenuButton.textContent = "☰";
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+        mobileMenuButton.focus();
+    }
 });
 
 // ==========================================================
@@ -573,7 +617,36 @@ productsPrev.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+/* =========================================
+   ACCESIBILIDAD — REDUCIR MOVIMIENTO
+   Detecta la preferencia del dispositivo
+   ========================================= */
 
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+if (reduceMotion.matches) {
+    const tvDemoVideo = document.querySelector(".tv-demo-video");
+    tvDemoVideo.pause();
+}
+
+/* =========================================
+   ACCESIBILIDAD — BOTÓN PAUSAR / REPRODUCIR
+   Control manual del video de Menús TV
+   ========================================= */
+
+const tvVideoControl = document.getElementById("tvVideoControl");
+const tvDemoVideoControl = document.querySelector(".tv-demo-video");
+
+tvVideoControl.addEventListener("click", function () {
+    if (tvDemoVideoControl.paused) {
+        tvDemoVideoControl.play();
+        tvVideoControl.textContent = "⏸ Pausar";
+        tvVideoControl.setAttribute("aria-label", "Pausar video");
+    } else {
+        tvDemoVideoControl.pause();
+        tvVideoControl.textContent = "▶ Reproducir";
+        tvVideoControl.setAttribute("aria-label", "Reproducir video");
+    }
+});
 
 
 

@@ -27,9 +27,7 @@
             </a>
 
 
-            <button class="mobile-menu-button" id="mobileMenuButton">
-                ☰
-            </button>     
+            <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
 
             
 <nav class="nav-links">
@@ -55,6 +53,9 @@
     <main>
 
         <section class="hero" id="inicio">
+
+            <!-- Efecto de partículas / chispas -->
+<div class="hero-particles" aria-hidden="true"></div>
 
             <div class="hero-content">
 
@@ -177,8 +178,8 @@
             <button class="ad-arrow ad-arrow-prev" id="adPrev" aria-label="Anuncio anterior">‹</button>
 
             <button class="ad-arrow ad-arrow-next" id="adNext" aria-label="Siguiente anuncio">›</button>
-    
-            <video id="adVideo" controls muted playsinline>
+
+    <video id="adVideo" controls muted playsinline aria-label="Video publicitario del negocio destacado">
                 <source src="videos/anuncio-supermercado.mp4" type="video/mp4">
                 Tu navegador no puede reproducir este video.
             </video>
@@ -259,16 +260,21 @@
 
             <div class="tv-screen-content">
 
-<video class="tv-demo-video" muted loop autoplay playsinline>
+<video class="tv-demo-video" muted loop autoplay playsinline aria-label="Demostración visual de un menú digital para televisión">
     <source src="videos/familypack.mp4" type="video/mp4">
 </video>
-                
+    
 
             </div>
+
+
 
         </div>
 
         <div class="tv-stand"></div>
+<button class="tv-video-control" id="tvVideoControl" aria-label="Pausar video">
+    ⏸ Pausar
+</button>
 
     </div>
 

@@ -93,6 +93,62 @@ a {
         );
 }
 
+/* CHISPAS DEL HERO */
+
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-particles::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        8vw 20vh rgba(255,255,255,0.35),
+        18vw 72vh rgba(255,255,255,0.25),
+        32vw 38vh rgba(55,227,111,0.45),
+        48vw 78vh rgba(255,255,255,0.25),
+        61vw 25vh rgba(55,227,111,0.40),
+        73vw 65vh rgba(255,255,255,0.30),
+        84vw 34vh rgba(55,227,111,0.45),
+        93vw 76vh rgba(255,255,255,0.25);
+}
+.hero-particles::before {
+    animation: particlesFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes particlesFloat {
+    0% {
+        transform: translateY(0);
+        opacity: 0.35;
+        filter: brightness(1);
+    }
+
+    50% {
+        transform: translateY(-18px);
+        opacity: 1;
+        filter: brightness(2);
+    }
+
+    100% {
+        transform: translateY(-35px);
+        opacity: 0.45;
+        filter: brightness(1);
+    }
+}
+
 .hero::after {
     content: "";
 
@@ -1373,4 +1429,36 @@ margin-right: auto;
 
 .locations-arrow-next {
     right: -18px;
+}
+
+/* =========================================
+   ACCESIBILIDAD — REDUCIR MOVIMIENTO
+   Respeta la configuración del dispositivo
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-particles::before {
+        animation: none;
+    }
+}
+
+/* =========================================
+   ACCESIBILIDAD — CONTROL DE VIDEO MENÚ TV
+   Botón para pausar o reproducir el video
+   ========================================= */
+
+.tv-video-control {
+    margin-top: 12px;
+    padding: 9px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+
+    background: rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
 }
