@@ -106,8 +106,8 @@ const locations = [
 
 const ads = [
     {
-        video: "videos/anuncio-supermercado.mp4",
-        name: "Manly Automotive Group"
+        video: "videos/toritopublicidad.mp4",
+        name: "El Torito Supermarket"
     },
     {
         video: "videos/commercial2.mp4",
