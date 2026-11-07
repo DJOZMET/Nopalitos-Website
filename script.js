@@ -75,6 +75,12 @@ const locations = [
     address: "1800 Piner Rd, Suite E, Santa Rosa, CA 95403"
 },
 
+{
+    logo: "images/lamorenitalogo.png",
+    name: "La Morenita Market",
+    address: "18307 Sonoma Hwy, Sonoma, CA 95476"
+},
+
     
    
 ];
