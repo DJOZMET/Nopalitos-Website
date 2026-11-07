@@ -110,8 +110,8 @@ const ads = [
         name: "El Torito Supermarket"
     },
     {
-        video: "videos/commercial2.mp4",
-        name: "Manly Honda"
+        video: "videos/morenitapublicidad.mp4",
+        name: "La Morenita Market"
     }
 
     // ===== AGREGA LOS ANUNCIOS NUEVOS ARRIBA DE ESTA LÍNEA =====
@@ -168,6 +168,8 @@ adVideo.addEventListener("ended", function () {
 
     showAd(nextAd);
 });
+showAd(0);
+
 
 const tvSmall = document.getElementById("tvSmall");
 const tvTitle = document.getElementById("tvTitle");
