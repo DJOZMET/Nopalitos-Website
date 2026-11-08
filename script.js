@@ -81,6 +81,18 @@ const locations = [
     address: "18307 Sonoma Hwy, Sonoma, CA 95476"
 },
 
+{
+    logo: "images/lamonarca.png",
+    name: "La Monarca Market & Taqueria",
+    address: "16200 Main St, Lower Lake, CA 95457"
+},
+
+{
+    logo: "images/lamonarca.png",
+    name: "La Monarca Market & Taqueria",
+    address: "5440 Live Oak Dr, Kelseyville, CA 95451"
+},
+
     
    
 ];
