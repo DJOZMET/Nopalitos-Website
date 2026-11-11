@@ -92,6 +92,17 @@ const locations = [
     name: "La Monarca Market & Taqueria",
     address: "5440 Live Oak Dr, Kelseyville, CA 95451"
 },
+{
+    logo: "images/lachuladalogo.png",
+    name: "La Chulada Taqueria & Market",
+    address: "1108 Grant Ave, Novato, CA 94947"
+},
+{
+    logo: "images/lacarretalogo.png",
+    name: "La Carreta Market",
+    address: "2033 Novato Blvd, Novato, CA 94947"
+},
+
 
     
    
