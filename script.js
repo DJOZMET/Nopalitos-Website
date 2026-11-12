@@ -421,6 +421,7 @@ languageButton.addEventListener("click", function () {
 
     if (currentLanguage === "es") {
         document.documentElement.lang = "en";
+        updateMobileMenuLabel();
 
         /* =========================================
    ACCESIBILIDAD — CONTROL DE VIDEO EN INGLÉS
@@ -480,6 +481,7 @@ locationsDescription.textContent = "Visit one of these local retailers to find N
 
     } else {
         document.documentElement.lang = "es";
+        updateMobileMenuLabel();
 
         /* =========================================
    ACCESIBILIDAD — CONTROL DE VIDEO EN ESPAÑOL
@@ -568,17 +570,45 @@ renderProducts();
 // Controla el botón ☰ y abre/cierra el menú en pantallas pequeñas.
 // ==========================================================
 
+function updateMobileMenuLabel() {
+    const isOpen = navLinks.classList.contains("active");
+    const isEnglish = document.documentElement.lang === "en";
+
+    mobileMenuButton.setAttribute(
+        "aria-label",
+        isEnglish
+            ? (isOpen ? "Close navigation menu" : "Open navigation menu")
+            : (isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación")
+    );
+}
+
+
+
     mobileMenuButton.addEventListener("click", function () {
         navLinks.classList.toggle("active");
     
         if (navLinks.classList.contains("active")) {
             mobileMenuButton.textContent = "✕";
             mobileMenuButton.setAttribute("aria-expanded", "true");
+            
         } else {
             mobileMenuButton.textContent = "☰";
             mobileMenuButton.setAttribute("aria-expanded", "false");
+          
         }
-         
+      updateMobileMenuLabel();   
+});
+
+// Cerrar automáticamente el menú móvil al elegir una sección
+navLinks.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function () {
+        if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+            mobileMenuButton.textContent = "☰";
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+           updateMobileMenuLabel();
+        }
+    });
 });
 
 /* =========================================
@@ -591,6 +621,7 @@ document.addEventListener("keydown", function (event) {
         navLinks.classList.remove("active");
         mobileMenuButton.textContent = "☰";
         mobileMenuButton.setAttribute("aria-expanded", "false");
+        updateMobileMenuLabel();
         mobileMenuButton.focus();
     }
 });

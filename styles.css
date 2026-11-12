@@ -1546,3 +1546,21 @@ margin-right: auto;
     }
 }
 
+/* En celulares, ocultar el visor PDF */
+@media (max-width: 600px) {
+    .catalogo-pdf {
+        display: none;
+    }
+
+    .catalogo-descarga {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .catalogo-descarga a {
+        max-width: 100%;
+        box-sizing: border-box;
+        white-space: normal;
+    }
+}
+
