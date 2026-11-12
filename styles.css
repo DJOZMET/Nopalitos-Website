@@ -1564,3 +1564,243 @@ margin-right: auto;
     }
 }
 
+/* ===== ANUNCIO NAVIDEÑO ===== */
+
+.holiday-banner {
+    padding: 20px;
+    background: linear-gradient(
+        135deg,
+        #064b2b,
+        #0b7540,
+        #064b2b
+    );
+    overflow: hidden;
+}
+
+.holiday-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 4px solid #e9bd55;
+    border-radius: 14px;
+    box-sizing: border-box;
+    box-shadow:
+        0 0 15px rgba(255, 215, 100, 0.5),
+        0 0 35px rgba(255, 215, 100, 0.25);
+
+    animation: holidayEntrance 1.2s ease-out both;
+}
+
+/* Luces doradas navideñas */
+.holiday-banner {
+    animation: holidayLights 3s ease-in-out infinite alternate;
+}
+
+@keyframes holidayLights {
+    0% {
+        box-shadow:
+            inset 0 0 15px rgba(255, 215, 0, 0.3),
+            0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    100% {
+        box-shadow:
+            inset 0 0 45px rgba(255, 215, 0, 0.9),
+            0 0 45px rgba(255, 215, 0, 0.8),
+            0 0 75px rgba(255, 180, 0, 0.5);
+    }
+}
+
+/* Accesibilidad: desactivar movimiento si se solicita */
+@media (prefers-reduced-motion: reduce) {
+    .holiday-banner {
+        animation: none;
+    }
+}
+
+/* Entrada suave del anuncio */
+@keyframes holidayEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .holiday-banner {
+        padding: 10px;
+    }
+
+    .holiday-banner img {
+        border-width: 2px;
+        border-radius: 8px;
+    }
+}
+
+/* Accesibilidad: respetar movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .holiday-banner img {
+        animation: none;
+    }
+}
+
+/* ===== COPITOS DE NIEVE NAVIDEÑOS ===== */
+
+.holiday-banner {
+    position: relative;
+}
+
+.holiday-snow {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.holiday-snow span {
+    position: absolute;
+    top: -10%;
+    color: white;
+    font-size: 24px;
+    opacity: 0.85;
+    text-shadow: 0 0 6px white;
+    animation: holidaySnowfall 9s linear infinite;
+}
+
+/* Posiciones y velocidades diferentes */
+.holiday-snow span:nth-child(1) {
+    left: 5%;
+    animation-delay: -1s;
+}
+
+.holiday-snow span:nth-child(2) {
+    left: 18%;
+    animation-delay: -5s;
+    font-size: 18px;
+}
+
+.holiday-snow span:nth-child(3) {
+    left: 32%;
+    animation-delay: -3s;
+}
+
+.holiday-snow span:nth-child(4) {
+    left: 46%;
+    animation-delay: -7s;
+    font-size: 16px;
+}
+
+.holiday-snow span:nth-child(5) {
+    left: 60%;
+    animation-delay: -2s;
+}
+
+.holiday-snow span:nth-child(6) {
+    left: 73%;
+    animation-delay: -6s;
+    font-size: 20px;
+}
+
+.holiday-snow span:nth-child(7) {
+    left: 85%;
+    animation-delay: -4s;
+}
+
+.holiday-snow span:nth-child(8) {
+    left: 95%;
+    animation-delay: -8s;
+    font-size: 18px;
+}
+
+@keyframes holidaySnowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.85;
+    }
+
+    90% {
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: translateY(800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .holiday-snow {
+        display: none;
+    }
+}
+/* ===== BOTÓN NAVIDEÑO PARA PEDIDOS ===== */
+
+.holiday-call-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    max-width: 650px;
+    margin: 20px auto 5px;
+    padding: 16px 24px;
+
+    background: linear-gradient(135deg, #a80000, #d51b1b);
+    color: #ffffff;
+    border: 3px solid #ffd700;
+    border-radius: 14px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    box-shadow: 0 0 18px rgba(255, 215, 0, 0.5);
+    transition: box-shadow 0.2s ease;
+}
+
+.holiday-call-button strong {
+    color: #ffeb80;
+    font-size: 23px;
+}
+
+.holiday-call-button span[lang="en"] {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.holiday-call-button:hover {
+    box-shadow: 0 0 28px rgba(255, 215, 0, 0.9);
+}
+
+.holiday-call-button:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .holiday-call-button {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .holiday-call-button strong {
+        font-size: 20px;
+    }
+}
+
+
