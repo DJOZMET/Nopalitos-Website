@@ -1462,3 +1462,87 @@ margin-right: auto;
 
     cursor: pointer;
 }
+/* =====================================
+   CATÁLOGO DE PRODUCTOS
+===================================== */
+
+.catalogo {
+    padding: 80px 20px;
+    background: #f5f8f3;
+    text-align: center;
+}
+
+.catalogo-header {
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+.catalogo-header > p:first-child {
+    color: #357a38;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.catalogo-header h2 {
+    color: #173c24;
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 15px 0;
+}
+
+.catalogo-header > p:last-child {
+    color: #526357;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.catalogo-pdf {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.catalogo-pdf iframe {
+    display: block;
+    width: 100%;
+    height: 650px;
+    border: none;
+    border-radius: 8px;
+}
+
+.catalogo-descarga {
+    margin-top: 30px;
+}
+
+.catalogo-descarga a {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #246b36;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.catalogo-descarga a:hover {
+    background: #174725;
+}
+
+@media (max-width: 600px) {
+    .catalogo {
+        padding: 50px 15px;
+    }
+
+    .catalogo-pdf {
+        padding: 6px;
+    }
+
+    .catalogo-pdf iframe {
+        height: 480px;
+    }
+}
+
